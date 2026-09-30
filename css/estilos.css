@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f5f8;
+    color: #24313d;
+}
+
+.encabezado {
+    background: #ffffff;
+    border-bottom: 1px solid #d9e2ea;
+    padding: 24px;
+}
+
+.encabezado div,
+.contenedor {
+    max-width: 1180px;
+    margin: auto;
+}
+
+.encabezado h1 {
+    margin: 0 0 8px;
+}
+
+.encabezado p {
+    margin: 0;
+    color: #667788;
+}
+
+.contenedor {
+    padding: 24px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.06);
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5df;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+button,
+.btn-secundario,
+.btn-editar,
+.btn-estado,
+.btn-eliminar {
+    display: inline-block;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+}
+
+.btn-secundario {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-editar {
+    background: #e6a700;
+    color: #202020;
+}
+
+.btn-estado {
+    background: #0f8b8d;
+    color: white;
+}
+
+.btn-eliminar {
+    background: #c83e4d;
+    color: white;
+}
+
+.botones,
+.acciones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.espacio-superior {
+    margin-top: 16px;
+}
+
+.mensaje {
+    padding: 14px;
+    margin-bottom: 20px;
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8ef;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eef3f7;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+.estado-programada {
+    color: #1769aa;
+}
+
+.estado-atendida {
+    color: #238636;
+}
+
+.estado-cancelada {
+    color: #c83e4d;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #667788;
+}
+
+@media (max-width: 760px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+}
